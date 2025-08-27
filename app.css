@@ -1,0 +1,47 @@
+body{
+    background-color: hsl(13, 31%, 94%);
+}
+#products{
+    width: 70%;
+    margin: 2em;
+}
+#cart {
+    float: right;
+}
+#inline-content{
+    display: flex;
+}
+#inline-content div{
+    flex-direction: column;
+    padding: 2em;
+    margin: 2em;
+    background-color: rgb(209, 199, 199);
+    border-radius: 3%;
+    text-align: center;
+}
+#inline-content div p{
+    text-align: left;
+}
+#products button{
+    padding: 1em 3em;
+    border-radius: 45%;
+    margin-top: -2em;
+}
+img{
+    width:250px;
+    height:250px;
+    border-radius: 3%;
+}
+button img {
+    width: 20px;
+    height: 20px;
+}
+.type {
+    color: whitesmoke
+}
+#price {
+    color: hsl(14, 86%, 42%);
+}
+#price, #title{
+    font-weight: bolder;
+}
