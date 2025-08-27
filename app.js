@@ -8,7 +8,7 @@ const Pie = document.querySelector("#Pie");
 const Cake = document.querySelector("#Cake");
 const Brownie = document.querySelector("#Brownie");
 const Panna_Cotta = document.querySelector("#Panna_Cotta");
-const btn = document.querySelectorAll("#addToCart");
+const btn = document.getElementsByClassName(".addToCart");
 
 if (width >= 1440) {
     const img1 = document.createElement("IMG");
@@ -46,4 +46,7 @@ if (width >= 1440) {
     const img9 = document.createElement("IMG");
     img9.src = "assets/images/image-panna-cotta-desktop.jpg";
     Panna_Cotta.insertAdjacentElement("afterbegin", img9);
+}
+btn.onclick = function () {
+    btn.style.backgroundColor = "hsl(14, 86%, 42%)";
 }
