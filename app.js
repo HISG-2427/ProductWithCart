@@ -9,6 +9,7 @@ const Cake = document.querySelector("#Cake");
 const Brownie = document.querySelector("#Brownie");
 const Panna_Cotta = document.querySelector("#Panna_Cotta");
 const buttons = document.querySelectorAll(".addToCart");
+const cart = document.querySelector("#cart");
 
 if (width >= 1440) {
     const img1 = document.createElement("IMG");
@@ -60,17 +61,31 @@ buttons.forEach((btn) => {
         imgC1.src = "assets/images/icon-increment-quantity.svg";
         button1.append(imgC1);
 
+        btn.disabled = true;
+
         const imgC2 = document.createElement("IMG");
         imgC2.src = "assets/images/icon-decrement-quantity.svg";
         button2.append(imgC2);
 
-        btn.textContent =`${button1} ${i} ${button2}`;
+        //incomplete add and minus buttons remaining
 
-        button1.style.padding = "0";
-        button2.style.padding = "0";
-        button1.style.backgroundColor = "black";
-        button2.style.backgroundColor = "black";
-        imgC1.style.height = "0.5px";
-        imgC1.style.width = "0.5px";
+        btn.textContent = `${button1} ${i} ${button2}`;
+
+        button1.style.padding = "0.1em 0.2em";
+        button2.style.padding = "0.1em 0.2em";
+        button1.style.borderColor = "white";
+        button2.style.borderColor = "white"; 
+        btn.style.fontSize = "17px";
+        btn.style.color = "white";
+        button1.style.margin = "0 1.5em";
+        button2.style.margin = "0 1.5em";
+        button1.style.backgroundColor = "hsl(14, 86%, 42%)";
+        button2.style.backgroundColor = "hsl(14, 86%, 42%)";
+
+        const p = document.createElement("p");
+        const name = btn.getAttribute("name");
+        p.append(name);
+        cart.append(p);
+        p.style.fontWeight = "800";
     });
   });

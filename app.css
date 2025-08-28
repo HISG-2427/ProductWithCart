@@ -3,10 +3,17 @@ body{
 }
 #products{
     width: 70%;
-    margin: 2em;
+    margin: 1.5em;
 }
 #cart {
     float: right;
+    padding: 2em;
+    background-color: white;
+    border-radius: 3%;
+}
+#cart .title {
+    color:hsl(14, 86%, 42%);
+    font-weight: 800;
 }
 #inline-content{
     display: flex;
@@ -15,7 +22,7 @@ body{
     flex-direction: column;
     padding: 2em;
     margin: 2em;
-    background-color: rgb(209, 199, 199);
+    background-color: hsl(20, 50%, 98%);
     border-radius: 3%;
     text-align: center;
 }
@@ -44,4 +51,7 @@ button img {
 }
 #price, #title{
     font-weight: bolder;
+}
+hr{
+    color: hsl(14, 86%, 42%);
 }
