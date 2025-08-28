@@ -8,7 +8,7 @@ const Pie = document.querySelector("#Pie");
 const Cake = document.querySelector("#Cake");
 const Brownie = document.querySelector("#Brownie");
 const Panna_Cotta = document.querySelector("#Panna_Cotta");
-const btn = document.getElementsByClassName(".addToCart");
+const buttons = document.querySelectorAll(".addToCart");
 
 if (width >= 1440) {
     const img1 = document.createElement("IMG");
@@ -47,6 +47,30 @@ if (width >= 1440) {
     img9.src = "assets/images/image-panna-cotta-desktop.jpg";
     Panna_Cotta.insertAdjacentElement("afterbegin", img9);
 }
-btn.onclick = function () {
-    btn.style.backgroundColor = "hsl(14, 86%, 42%)";
-}
+
+const button1 = document.createElement("button");
+const button2 = document.createElement("button");
+var i = 1;
+
+//need to enclose + and - sign in button
+buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        btn.style.backgroundColor = "hsl(14, 86%, 42%)";
+        const imgC1 = document.createElement("IMG");
+        imgC1.src = "assets/images/icon-increment-quantity.svg";
+        button1.append(imgC1);
+
+        const imgC2 = document.createElement("IMG");
+        imgC2.src = "assets/images/icon-decrement-quantity.svg";
+        button2.append(imgC2);
+
+        btn.textContent =`${button1} ${i} ${button2}`;
+
+        button1.style.padding = "0";
+        button2.style.padding = "0";
+        button1.style.backgroundColor = "black";
+        button2.style.backgroundColor = "black";
+        imgC1.style.height = "0.5px";
+        imgC1.style.width = "0.5px";
+    });
+  });
