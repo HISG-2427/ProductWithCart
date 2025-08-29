@@ -10,6 +10,7 @@ const Brownie = document.querySelector("#Brownie");
 const Panna_Cotta = document.querySelector("#Panna_Cotta");
 const buttons = document.querySelectorAll(".addToCart");
 const cart = document.querySelector("#cart");
+const Products = [Waffle, Crème_Brûlée, Macaron, Tiramisu, Baklava, Pie, Cake, Brownie, Panna_Cotta];
 
 if (width >= 1440) {
     const img1 = document.createElement("IMG");
@@ -69,7 +70,7 @@ buttons.forEach((btn) => {
 
         //incomplete add and minus buttons remaining
 
-        btn.textContent = `${button1} ${i} ${button2}`;
+        btn.textContent = `${i}`;
 
         button1.style.padding = "0.1em 0.2em";
         button2.style.padding = "0.1em 0.2em";
@@ -82,10 +83,25 @@ buttons.forEach((btn) => {
         button1.style.backgroundColor = "hsl(14, 86%, 42%)";
         button2.style.backgroundColor = "hsl(14, 86%, 42%)";
 
-        const p = document.createElement("p");
+        const p2 = document.createElement("p");
+        const p3 = document.createElement("p")
         const name = btn.getAttribute("name");
-        p.append(name);
-        cart.append(p);
-        p.style.fontWeight = "800";
+         
+        Products.forEach((pr) => {
+            const p1 = pr.querySelectorAll("p");
+            p1.forEach((p) => {
+                id = p.getAttribute("id");
+                if (p === name) {
+                    if (id === "price") {
+                        p3.append(p);
+                    }; 
+                };
+            })
+        })
+        
+        p2.append(name);
+        cart.append(p2);
+        cart.append(p3);
+        p2.style.fontWeight = "800";
     });
   });

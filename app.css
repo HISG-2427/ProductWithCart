@@ -1,6 +1,9 @@
 body{
     background-color: hsl(13, 31%, 94%);
 }
+h1{
+    font-size: 40px;
+}
 #products{
     width: 70%;
     margin: 0.5em;
@@ -43,7 +46,7 @@ button img {
     width: 15px;
     height: 12px;
 }
-.type {
+#type {
     color: whitesmoke
 }
 #price {
