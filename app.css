@@ -46,6 +46,13 @@ button img {
     width: 15px;
     height: 12px;
 }
+#items img {
+    width: 100px;
+    height: auto;
+}
+#items{
+    text-align: center;
+}
 #type {
     color: whitesmoke
 }

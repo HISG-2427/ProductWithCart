@@ -12,7 +12,7 @@ const buttons = document.querySelectorAll(".addToCart");
 const cart = document.querySelector("#cart");
 const Products = [Waffle, Crème_Brûlée, Macaron, Tiramisu, Baklava, Pie, Cake, Brownie, Panna_Cotta];
 
-if (width >= 1440) {
+if (width <= 2000) {
     const img1 = document.createElement("IMG");
     img1.src = "assets/images/image-waffle-desktop.jpg";
     Waffle.insertAdjacentElement("afterbegin", img1);
